@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+
+{% block contect %}
+{% for postings in postings %}
+    <div class="carousel-item active" style="width: 18rem;">
+     <img src="{{ postings.image.url }}" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+         <h5>{{ postings.judul }}</h5>
+         <p>{{ postings.konten }}</p>
+         <p><a href="#" class="btn btn-warning mt-3">Learn More</a></p>
+        </div>
+    </div>
+{% endfor %}
+<section id="hero">
+    <div class="container">
+      <div class="rom">
+        <div class="col-ig-6">
+          <h1 class="display-1"data-aos="fade-up">GO HEALING</h1>
+          <p data-aos="fade-up" data-aos-delay="300">Hidup jangan diambil pusing, jika pusing kita healing.</p>
+          <a href="#" class="btn btn-outline-light" data-aos="fade-up" data-aos-delay="500">Explor My Work</a>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}
